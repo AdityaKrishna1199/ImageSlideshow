@@ -9,6 +9,10 @@ import UIKit
 
 @objcMembers
 open class FullScreenSlideshowViewController: UIViewController {
+    
+    open override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .allButUpsideDown
+    }
 
     open var slideshow: ImageSlideshow = {
         let slideshow = ImageSlideshow()
